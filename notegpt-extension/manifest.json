@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "NoteGPT - ChatGPT 笔记助手",
+  "description": "捕捉 ChatGPT 对话、进行高亮和批注，并导出 PDF。",
+  "version": "0.1.0",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": [
+    "https://chat.openai.com/*",
+    "https://chatgpt.com/*"
+  ],
+  "action": {
+    "default_title": "NoteGPT",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.openai.com/*",
+        "https://chatgpt.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
