@@ -1,0 +1,93 @@
+#notegpt-root {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(420px, 95vw);
+  height: 100vh;
+  z-index: 2147483646;
+  background: #ffffff;
+  box-shadow: -8px 0 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #e5e7eb;
+}
+
+#notegpt-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f8fafc;
+}
+
+#notegpt-title { font-weight: 700; }
+
+.notegpt-btn {
+  border: none;
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  color: white;
+  background: #2563eb;
+}
+
+.notegpt-btn.secondary { background: #4b5563; }
+.notegpt-btn.warn { background: #d97706; }
+
+#notegpt-body {
+  flex: 1;
+  overflow: auto;
+  padding: 12px;
+  background: #fff;
+}
+
+.notegpt-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.notegpt-role {
+  display: inline-block;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.notegpt-role.user { background: #2563eb; }
+.notegpt-role.assistant { background: #7c3aed; }
+
+.notegpt-content {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  min-height: 56px;
+  padding: 8px;
+  outline: none;
+  line-height: 1.6;
+}
+
+.notegpt-toolbar {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.notegpt-comment {
+  width: 100%;
+  margin-top: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  min-height: 60px;
+  padding: 8px;
+  resize: vertical;
+}
+
+.notegpt-highlight-yellow { background: #fef08a; }
+.notegpt-highlight-green { background: #bbf7d0; }
+.notegpt-highlight-pink { background: #fbcfe8; }
